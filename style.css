@@ -1,0 +1,466 @@
+/* ==========================================================
+   Dengue Pediátrico — tema oscuro clínico con acentos cian
+   Guárdalo como style.css junto a app.py
+   ========================================================== */
+
+:root {
+    --bg: #0b0f19;
+    --panel: #131c31;
+    --panel-2: #18233d;
+    --borde: rgba(0, 242, 254, 0.22);
+    --cian: #00f2fe;
+    --azul: #4facfe;
+    --texto: #e2e8f0;
+    --texto-suave: #94a3b8;
+    --ok: #22c55e;
+    --alerta: #f43f5e;
+}
+
+/* ---------- Base ---------- */
+.main, .stApp {
+    background-color: var(--bg) !important;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--texto);
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+.block-container {
+    padding-top: 2rem !important;
+    max-width: 1300px;
+}
+
+hr {
+    border-color: rgba(0, 242, 254, 0.15) !important;
+}
+
+/* ---------- Encabezados ---------- */
+h1 {
+    color: var(--cian) !important;
+    font-weight: 700 !important;
+    font-size: 2.1rem !important;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+    margin-bottom: 0.5rem;
+}
+
+h2, h3, h4, h5 {
+    color: var(--azul) !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 8px rgba(79, 172, 254, 0.25);
+}
+
+p, li, span {
+    color: var(--texto);
+}
+
+strong {
+    color: #ffffff;
+}
+
+code {
+    color: #67e8f9 !important;
+    background: rgba(0, 242, 254, 0.08) !important;
+    border-radius: 4px;
+    padding: 1px 5px;
+}
+
+/* ---------- Etiquetas y textos de apoyo ---------- */
+label, .stCaption, [data-testid="stCaptionContainer"] {
+    color: #cbd5e1 !important;
+}
+
+[data-testid="stWidgetLabel"] p {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+}
+
+/* ---------- Campos de entrada ---------- */
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div,
+[data-baseweb="base-input"],
+.stNumberInput input,
+.stTextInput input {
+    background-color: var(--panel) !important;
+    color: var(--texto) !important;
+    border-color: var(--borde) !important;
+    border-radius: 8px !important;
+}
+
+[data-baseweb="select"] span,
+[data-baseweb="select"] div {
+    color: var(--texto) !important;
+}
+
+[data-baseweb="select"] svg,
+.stNumberInput svg {
+    fill: var(--cian) !important;
+}
+
+/* Menú desplegable de opciones */
+[data-baseweb="popover"] ul,
+[data-baseweb="menu"] {
+    background-color: var(--panel-2) !important;
+    border: 1px solid var(--borde) !important;
+}
+
+[data-baseweb="menu"] li:hover,
+[data-baseweb="menu"] [aria-selected="true"] {
+    background-color: rgba(0, 242, 254, 0.15) !important;
+}
+
+/* Botones +/- del number_input */
+.stNumberInput button {
+    background-color: var(--panel-2) !important;
+    color: var(--cian) !important;
+    border-color: var(--borde) !important;
+}
+
+/* ---------- Slider ---------- */
+[data-testid="stSlider"] [role="slider"] {
+    background-color: var(--cian) !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+}
+
+[data-testid="stSlider"] [data-testid="stTickBarMin"],
+[data-testid="stSlider"] [data-testid="stTickBarMax"],
+[data-testid="stSliderThumbValue"] {
+    color: var(--cian) !important;
+}
+
+/* ---------- Radio ---------- */
+[data-testid="stRadio"] label p {
+    color: var(--texto) !important;
+}
+
+/* ---------- Métricas ---------- */
+div.stMetric,
+[data-testid="stMetric"] {
+    background-color: var(--panel) !important;
+    border-radius: 12px;
+    padding: 15px 18px;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.08);
+    border: 1px solid var(--borde);
+}
+
+[data-testid="stMetricLabel"] p,
+div.stMetric label {
+    color: var(--texto-suave) !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--cian) !important;
+    font-weight: 700;
+}
+
+/* ---------- Acordeón ---------- */
+[data-testid="stExpander"] {
+    background-color: var(--panel) !important;
+    border: 1px solid rgba(79, 172, 254, 0.25) !important;
+    border-radius: 10px !important;
+}
+
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary p {
+    color: #67e8f9 !important;
+    font-weight: 600;
+}
+
+[data-testid="stExpander"] svg {
+    fill: #67e8f9 !important;
+}
+
+/* ---------- Tablas ---------- */
+[data-testid="stDataFrame"] {
+    background-color: var(--panel) !important;
+    border: 1px solid rgba(0, 242, 254, 0.2) !important;
+    border-radius: 10px !important;
+    padding: 6px;
+}
+
+/* ---------- Alertas ---------- */
+[data-testid="stAlert"] {
+    border-radius: 10px !important;
+    border: 1px solid rgba(0, 242, 254, 0.25) !important;
+}
+
+[data-testid="stAlert"] p {
+    color: inherit !important;
+}
+
+/* ---------- Carga de archivos ---------- */
+[data-testid="stFileUploader"] section {
+    background-color: var(--panel) !important;
+    border: 1px dashed rgba(0, 242, 254, 0.4) !important;
+    border-radius: 10px;
+}
+
+[data-testid="stFileUploader"] small,
+[data-testid="stFileUploader"] span {
+    color: var(--texto-suave) !important;
+}
+
+/* ---------- Botones ---------- */
+.stButton > button,
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    color: #0b0f19 !important;
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.35);
+    transition: all 0.3s ease;
+}
+
+.stButton > button p,
+.stDownloadButton > button p {
+    color: #0b0f19 !important;
+    font-weight: 700;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background: linear-gradient(135deg, #f72585 0%, #7209b7 100%);
+    box-shadow: 0 0 20px rgba(247, 37, 133, 0.55);
+    transform: translateY(-1px);
+}
+
+.stButton > button:hover p,
+.stDownloadButton > button:hover p {
+    color: #ffffff !important;
+}
+
+/* ---------- Pestañas ---------- */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 242, 254, 0.15);
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: var(--panel);
+    border-radius: 8px 8px 0 0;
+    color: #a5f3fc;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.stTabs [data-baseweb="tab"] p {
+    color: #a5f3fc !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%) !important;
+    font-weight: 700;
+}
+
+.stTabs [aria-selected="true"] p {
+    color: #0b0f19 !important;
+}
+
+/* Oculta la línea de resaltado por defecto de las pestañas */
+.stTabs [data-baseweb="tab-highlight"],
+.stTabs [data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 254, 0.3);
+    border-radius: 6px;
+}
+
+
+/* ==========================================================
+   Tarjetas de rendimiento y factores de riesgo (tema neón)
+   ========================================================== */
+.tarjeta {
+    background: var(--panel);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+    margin: 0 0 1.6rem 0;
+    box-shadow: 0 0 22px rgba(0, 242, 254, 0.10), inset 0 0 40px rgba(0, 242, 254, 0.03);
+}
+
+.tarjeta-titulo {
+    color: var(--cian) !important;
+    font-size: 1.7rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.45) !important;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+}
+
+.leyenda {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.punto {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.punto-lr { background: var(--cian); box-shadow: 0 0 8px rgba(0, 242, 254, 0.8); }
+.punto-nn { background: #f72585; box-shadow: 0 0 8px rgba(247, 37, 133, 0.8); }
+
+.metrica {
+    margin-bottom: 1.1rem;
+}
+
+.metrica-nombre {
+    color: #e2e8f0;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.fila-barra {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 5px;
+}
+
+.barra-fondo {
+    flex: 1;
+    height: 12px;
+    background: rgba(148, 163, 184, 0.16);
+    border: 1px solid rgba(0, 242, 254, 0.10);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 100%;
+    border-radius: 999px;
+}
+
+/* Regresión logística: cian -> azul */
+.barra-lr {
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.55);
+}
+
+/* Red neuronal: magenta -> violeta */
+.barra-nn {
+    background: linear-gradient(90deg, #f72585 0%, #7209b7 100%);
+    box-shadow: 0 0 10px rgba(247, 37, 133, 0.5);
+}
+
+/* Factores de riesgo: magenta = aumenta riesgo, cian = lo reduce */
+.barra-riesgo {
+    background: linear-gradient(90deg, #7209b7 0%, #f72585 100%);
+    box-shadow: 0 0 10px rgba(247, 37, 133, 0.5);
+}
+
+.barra-protector {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.55);
+}
+
+.valor {
+    min-width: 64px;
+    text-align: right;
+    color: var(--cian);
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Matrices de confusión ---------- */
+.matrices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    margin-top: 1.6rem;
+}
+
+.matriz-titulo {
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-shadow: 0 0 8px rgba(79, 172, 254, 0.3);
+    margin-bottom: 0.6rem;
+}
+
+.matriz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.celda {
+    border-radius: 12px;
+    padding: 1rem 0.6rem;
+    text-align: center;
+    background: var(--panel-2);
+}
+
+.celda-ok {
+    border: 1px solid rgba(0, 242, 254, 0.55);
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.18);
+}
+
+.celda-err {
+    border: 1px solid rgba(247, 37, 133, 0.55);
+    box-shadow: 0 0 12px rgba(247, 37, 133, 0.18);
+}
+
+.celda-num {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.celda-ok .celda-num  { color: var(--cian); text-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
+.celda-err .celda-num { color: #ff5fa2;     text-shadow: 0 0 10px rgba(247, 37, 133, 0.5); }
+
+.celda-txt {
+    color: #cbd5e1;
+    font-size: 0.88rem;
+    margin-top: 2px;
+}
+
+/* ---------- Factores de riesgo ---------- */
+.factor {
+    margin-bottom: 1rem;
+}
+
+.factor-cab {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.nota {
+    color: var(--texto-suave) !important;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-top: 1.2rem !important;
+}
+
+@media (max-width: 900px) {
+    .matrices { grid-template-columns: 1fr; }
+    .tarjeta { padding: 1.4rem 1.2rem; }
+}
